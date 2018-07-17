@@ -1,11 +1,32 @@
 {
   "name": "R7FrontendTest",
   "version": "0.0.1",
+  "main": "index.html",
   "scripts": {
-    "start": "node app.js"
+    "start": "npm run gulp",
+    "gulp": "gulp"
   },
-  "dependencies": {
-    "connect": "~3.1.1",
-    "serve-static": "~1.5.3"
+  "repository": {
+    "type": "git"
+  },
+  "author": "Tammy Fagá",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-bless": "^4.0.0",
+    "gulp-changed": "^2.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-watch": "^4.3.11"
+  },
+	"dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
   }
 }

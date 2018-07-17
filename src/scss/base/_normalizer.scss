@@ -1,0 +1,11 @@
+body {
+	background-color: $black;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+
+	* {
+		box-sizing: border-box;
+	}
+}

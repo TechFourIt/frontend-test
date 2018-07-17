@@ -1,0 +1,62 @@
+.header {
+
+	.header-content {
+		height: 234px;
+		position: relative;
+
+		.header-box-logo {
+			position: absolute;
+			top: 47px;
+		}
+
+		.header-box-title {
+			background-color: $white;
+			border-radius: 2px;
+			padding: 10px;
+			text-align: center;
+			width: 92%;
+
+			h1 {
+				color: $black;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 30px;
+				font-weight: 700;
+				letter-spacing: -3px;
+				margin: 0;
+				text-transform: uppercase;
+			}
+		}
+	}	
+
+
+	@media screen and (max-width: 767px) {
+		.header-content {
+			.header-box-title {
+				width: 83%;
+			}
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		.header-content {
+			.header-box-logo {
+				top: 80px;
+
+				img {
+					max-width: 85%;
+					height: auto;
+				}
+			}			
+
+			.header-box-title {
+				text-align: right;
+				width: 83%;
+
+				h1 {
+					font-size: 25px;
+				}
+			}
+		}
+	}
+	
+}
