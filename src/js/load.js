@@ -4,19 +4,14 @@ var App = App || {};
 
 	App.Load = {
 
-		init: function init() {
+		init: function() {
 			this.cacheSelectors();
 			this.Events.loadData();
 			// this.bindEvents();
-			// this.init = function(){
-			// 	_this.loadData(_this.loadForm);
-			// }
 		},
 
-		cacheSelectors: function cacheSelectors() {
-			// this.list = $('.ul-list');
-			// this.list_item = this.list.find('.li-list');
-			// this.data = [];
+		cacheSelectors: function() {
+			this.list = $('.ul-list');
 		},
 
 		// bindEvents: function bindEvents() {
@@ -25,21 +20,34 @@ var App = App || {};
 
 		Events: {
 
-			loadData: function loadData(fun){
+			loadData: function(){
 				var self = App.Load;
-				var data = [];
+				var url = "json/fazenda.json";
 
-				var jqxhr = $.getJSON(data_json)
-				.done(function(data) {
-					data = data;
-					fun();
-				})
-				.fail(function() {
-					alert('Ocorreu um erro ao carregar as informações');
+				var httpRequest = new XMLHttpRequest();
+				httpRequest.open("GET", url);
+				httpRequest.responseType = "json";
+				httpRequest.addEventListener("readystatechange", function () {
+					if (httpRequest.readyState == 4){
+						if (httpRequest.status == 200){
+							var response = httpRequest.response.data;
+							var template = '';
+
+								response.forEach(function(response){
+									var img = response.picture;
+									template += '<li class="li-item"><div class="circle-img"><img src='+img+'></div><div class="description"><h2 class="title">'+ response.name +'</h2><p class="text">' +decodeURIComponent(response.description)+'</p></div></li>';
+								});
+								self.list.append(template);
+						} else {
+							return alert('Não foi possível carregar as informações');  
+						}
+					}
 				});
-			}
 
-		},
+				httpRequest.send();
+
+			}
+		}
 
 	};
 
