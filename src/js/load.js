@@ -29,11 +29,8 @@ var App = App || {};
 							var response = data.sort(function(a, b) {
 								return Number(b.positive) - Number(a.positive);
 							});
-							
-							var template = '';
-							
-							console.log (response);
 
+							var template = '';
 								response.forEach(function(response){
 									var img = response.picture;
 									var totalLikes = Number(response.positive) + Number(response.negative);

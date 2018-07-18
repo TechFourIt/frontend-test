@@ -47,3 +47,38 @@ Depois do seu setup você precisará seguir as seguintes instruções, para cons
 3. Performance
 
 <sub>Os dados presentes neste teste são totalmente fictícios.</sub>
+
+---
+
+# Sobre o Teste Front End - Tammy
+
+## Estrutura do Projeto
+
+O projeto acompanha os seguintes critérios/tecnologias:
+
+* Jade (para HTML) + Component Based Pattern
+* SCSS (para CSS) + Component Based Pattern
+* Vanilla JavaScript (opc: jQuery) + Module Pattern (Dojo)
+
+Todos os arquivos a serem editados, devem ser feitos na pasta única e exclusivamente ***src***.
+
+---
+
+## Iniciando o projeto
+
+Antes de tudo, clone o projeto para a sua máquina.
+
+Após clonar, crie um arquivo chamado ***.config.json*** no root do seu projeto (pasta **pai**) e copie o conteúdo de ***.config-example.json***. Altere os parâmetros de acordo com o seu ambiente, como o browser que será executado o servidor, porta, etc...
+
+Após realizar as modificações e inserir as configurações necessárias para o Gulp, acesse o terminal e execute o "package manager" abaixo:
+
+NPM (Node Package Management):
+
+```
+# Executa o NPM para instalação das dependências do projeto
+npm install
+
+# Executa o Gulp para compilação e execução do browser-sync
+npm start
+
+```
