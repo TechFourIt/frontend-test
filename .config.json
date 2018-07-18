@@ -1,0 +1,17 @@
+{
+	"routes": {
+		"source": "src/",
+		"dist": "dist/"
+	},
+
+	"bs": {
+		"browserToOpen": "chrome",
+		"portToStart": 3000,
+		"urlToGo": "http://localhost/frontend-test/dist/"
+	},
+
+	"output": {
+		"cssFile": "style.min.css",
+		"jsFile": "main.min.js"
+	}
+}

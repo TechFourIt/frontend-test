@@ -5,8 +5,6 @@ public/
 dist/
 
 # Files
-.config.json
-config.json
 npm-debug.log
 
 *.swp
